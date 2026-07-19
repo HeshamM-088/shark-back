@@ -15,6 +15,14 @@ app.use(express.json());
 
 connectedDB();
 
+app.get("/", (req, res) => {
+  return res.status(400).json({
+    status_code: 200,
+    message: "WELCOME",
+    data: null,
+  });
+});
+
 app.use("/api/v1/auth", auth_routes);
 app.use("/api/v1/products", products_routes);
 app.use("/api/v1/users", users_routes);
