@@ -9,23 +9,23 @@ const upload = require("../../middleware/multer");
 // const password = require("../../controller/Auth/register/password_user");
 // const resPassword = require("../../controller/Auth/register/res-Password");
 
-router.use("/" , ( req, res, next )=>{
-    next();
-    // const role = req.headers.authorization;
-    // console.log(role);
+router.use("/", (req, res, next) => {
+  next();
+  // const role = req.headers.authorization;
+  // console.log(role);
 
-    // if(role == "admin"){
-    //    next()
-    // }else{
-    //      res.status(403).json({
-    //         "error":403,
-    //         "message": "access drop"
-    //     })
-        
-    // }
+  // if(role == "admin"){
+  //    next()
+  // }else{
+  //      res.status(403).json({
+  //         "error":403,
+  //         "message": "access drop"
+  //     })
+
+  // }
 });
 
-router.post( "/register" , upload.single('image') , register);
-router.post( "/login" , login);
+router.post("/register", upload.single("image"), register);
+router.post("/login", login);
 
 module.exports = router;
