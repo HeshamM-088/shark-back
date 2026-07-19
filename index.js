@@ -5,9 +5,9 @@ const app = express();
 require("dotenv").config();
 const Port = process.env.PORT;
 
-const auth_routes = require("./Routers/Auth/auth.router");
+const auth_routes = require("./Routers/Auth/AUTH.router");
 const products_routes = require("./Routers/Products/Products");
-const users_routes = require("./Routers/Users/user.router");
+const users_routes = require("./Routers/Users/USER.router");
 const cart_routes = require("./Routers/cart/cart.router");
 const connectedDB = require("./config/db");
 
